@@ -1,0 +1,474 @@
+{
+  "info": {
+    "_postman_id": "976fb1fa-d2f7-473c-92b2-9dca41f3c056",
+    "name": "Wordpress Api",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "General",
+      "item": [
+        {
+          "name": "All Options",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMCIsImlhdCI6MTU1NjY2NjExOCwibmJmIjoxNTU2NjY2MTE4LCJleHAiOjE1NTcyNzA5MTgsImRhdGEiOnsidXNlciI6eyJpZCI6IjEifX19.E2f1PXnRd5lGws29diyLOwer9hKY5_rJSZ74LIVAXP0",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": {
+              "raw": "http://localhost:8000/wp-json/wp/v2/",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8000",
+              "path": ["wp-json", "wp", "v2", ""]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Blogs",
+      "item": [
+        {
+          "name": "Create Blog",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "type": "text",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "type": "text",
+                "value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMCIsImlhdCI6MTU1NjY2NjExOCwibmJmIjoxNTU2NjY2MTE4LCJleHAiOjE1NTcyNzA5MTgsImRhdGEiOnsidXNlciI6eyJpZCI6IjEifX19.E2f1PXnRd5lGws29diyLOwer9hKY5_rJSZ74LIVAXP0"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n\t\"title\": \"Post One\",\n\t\"content\": \"This is a post\",\n\t\"status\": \"publish\"\n}"
+            },
+            "url": {
+              "raw": "http://localhost:8000/wp-json/wp/v2/blogs",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8000",
+              "path": ["wp-json", "wp", "v2", "blogs"]
+            },
+            "description": "Create new post"
+          },
+          "response": []
+        },
+        {
+          "name": "Read All Blogs",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "type": "text",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "type": "text",
+                "value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMCIsImlhdCI6MTU1NjY2NjExOCwibmJmIjoxNTU2NjY2MTE4LCJleHAiOjE1NTcyNzA5MTgsImRhdGEiOnsidXNlciI6eyJpZCI6IjEifX19.E2f1PXnRd5lGws29diyLOwer9hKY5_rJSZ74LIVAXP0"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n\t\"title\": \"Post One\",\n\t\"content\": \"This is a post\",\n\t\"status\": \"publish\"\n}"
+            },
+            "url": {
+              "raw": "http://localhost:8000/wp-json/wp/v2/blogs",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8000",
+              "path": ["wp-json", "wp", "v2", "blogs"]
+            },
+            "description": "Find user based on userId"
+          },
+          "response": [
+            {
+              "name": "http://localhost:8000/wp-json/wp/v2/users/1",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": ""
+                },
+                "url": {
+                  "raw": "http://localhost:8000/wp-json/wp/v2/users/1",
+                  "protocol": "http",
+                  "host": ["localhost"],
+                  "port": "8000",
+                  "path": ["wp-json", "wp", "v2", "users", "1"]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Date",
+                  "value": "Tue, 30 Apr 2019 23:08:26 GMT"
+                },
+                {
+                  "key": "Server",
+                  "value": "Apache/2.4.25 (Debian)"
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "PHP/7.2.17"
+                },
+                {
+                  "key": "X-Robots-Tag",
+                  "value": "noindex"
+                },
+                {
+                  "key": "Link",
+                  "value": "<http://localhost:8000/wp-json/>; rel=\"https://api.w.org/\""
+                },
+                {
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "Access-Control-Expose-Headers",
+                  "value": "X-WP-Total, X-WP-TotalPages"
+                },
+                {
+                  "key": "Access-Control-Allow-Headers",
+                  "value": "Authorization, Content-Type"
+                },
+                {
+                  "key": "X-WP-Total",
+                  "value": "1"
+                },
+                {
+                  "key": "X-WP-TotalPages",
+                  "value": "1"
+                },
+                {
+                  "key": "Allow",
+                  "value": "GET"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "1797"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5, max=100"
+                },
+                {
+                  "key": "Connection",
+                  "value": "Keep-Alive"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=UTF-8"
+                }
+              ],
+              "cookie": [],
+              "body": "[\n    {\n        \"id\": 1,\n        \"date\": \"2019-04-30T22:58:33\",\n        \"date_gmt\": \"2019-04-30T22:58:33\",\n        \"guid\": {\n            \"rendered\": \"http://localhost:8000/?p=1\"\n        },\n        \"modified\": \"2019-04-30T23:06:07\",\n        \"modified_gmt\": \"2019-04-30T23:06:07\",\n        \"slug\": \"hello-world\",\n        \"status\": \"publish\",\n        \"type\": \"post\",\n        \"link\": \"http://localhost:8000/hello-world/\",\n        \"title\": {\n            \"rendered\": \"Hello world2!\"\n        },\n        \"content\": {\n            \"rendered\": \"\\n<p>Welcome to WordPress. This is your first post. Edit or delete it, then start writing!</p>\\n\",\n            \"protected\": false\n        },\n        \"excerpt\": {\n            \"rendered\": \"<p>Welcome to WordPress. This is your first post. Edit or delete it, then start writing!</p>\\n\",\n            \"protected\": false\n        },\n        \"author\": 1,\n        \"featured_media\": 0,\n        \"comment_status\": \"open\",\n        \"ping_status\": \"open\",\n        \"sticky\": false,\n        \"template\": \"\",\n        \"format\": \"standard\",\n        \"meta\": [],\n        \"categories\": [\n            1\n        ],\n        \"tags\": [],\n        \"_links\": {\n            \"self\": [\n                {\n                    \"href\": \"http://localhost:8000/wp-json/wp/v2/posts/1\"\n                }\n            ],\n            \"collection\": [\n                {\n                    \"href\": \"http://localhost:8000/wp-json/wp/v2/posts\"\n                }\n            ],\n            \"about\": [\n                {\n                    \"href\": \"http://localhost:8000/wp-json/wp/v2/types/post\"\n                }\n            ],\n            \"author\": [\n                {\n                    \"embeddable\": true,\n                    \"href\": \"http://localhost:8000/wp-json/wp/v2/users/1\"\n                }\n            ],\n            \"replies\": [\n                {\n                    \"embeddable\": true,\n                    \"href\": \"http://localhost:8000/wp-json/wp/v2/comments?post=1\"\n                }\n            ],\n            \"version-history\": [\n                {\n                    \"count\": 1,\n                    \"href\": \"http://localhost:8000/wp-json/wp/v2/posts/1/revisions\"\n                }\n            ],\n            \"predecessor-version\": [\n                {\n                    \"id\": 5,\n                    \"href\": \"http://localhost:8000/wp-json/wp/v2/posts/1/revisions/5\"\n                }\n            ],\n            \"wp:attachment\": [\n                {\n                    \"href\": \"http://localhost:8000/wp-json/wp/v2/media?parent=1\"\n                }\n            ],\n            \"wp:term\": [\n                {\n                    \"taxonomy\": \"category\",\n                    \"embeddable\": true,\n                    \"href\": \"http://localhost:8000/wp-json/wp/v2/categories?post=1\"\n                },\n                {\n                    \"taxonomy\": \"post_tag\",\n                    \"embeddable\": true,\n                    \"href\": \"http://localhost:8000/wp-json/wp/v2/tags?post=1\"\n                }\n            ],\n            \"curies\": [\n                {\n                    \"name\": \"wp\",\n                    \"href\": \"https://api.w.org/{rel}\",\n                    \"templated\": true\n                }\n            ]\n        }\n    }\n]"
+            },
+            {
+              "name": "http://localhost:8000/wp-json/wp/v2/users/1",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": ""
+                },
+                "url": {
+                  "raw": "http://localhost:8000/wp-json/wp/v2/users/1",
+                  "protocol": "http",
+                  "host": ["localhost"],
+                  "port": "8000",
+                  "path": ["wp-json", "wp", "v2", "users", "1"]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Date",
+                  "value": "Tue, 30 Apr 2019 23:09:01 GMT"
+                },
+                {
+                  "key": "Server",
+                  "value": "Apache/2.4.25 (Debian)"
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "PHP/7.2.17"
+                },
+                {
+                  "key": "X-Robots-Tag",
+                  "value": "noindex"
+                },
+                {
+                  "key": "Link",
+                  "value": "<http://localhost:8000/wp-json/>; rel=\"https://api.w.org/\""
+                },
+                {
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "Access-Control-Expose-Headers",
+                  "value": "X-WP-Total, X-WP-TotalPages"
+                },
+                {
+                  "key": "Access-Control-Allow-Headers",
+                  "value": "Authorization, Content-Type"
+                },
+                {
+                  "key": "Allow",
+                  "value": "GET"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "560"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5, max=100"
+                },
+                {
+                  "key": "Connection",
+                  "value": "Keep-Alive"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=UTF-8"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"id\": 1,\n    \"name\": \"jeremy\",\n    \"url\": \"\",\n    \"description\": \"\",\n    \"link\": \"http://localhost:8000/author/jeremy/\",\n    \"slug\": \"jeremy\",\n    \"avatar_urls\": {\n        \"24\": \"http://2.gravatar.com/avatar/b642b4217b34b1e8d3bd915fc65c4452?s=24&d=mm&r=g\",\n        \"48\": \"http://2.gravatar.com/avatar/b642b4217b34b1e8d3bd915fc65c4452?s=48&d=mm&r=g\",\n        \"96\": \"http://2.gravatar.com/avatar/b642b4217b34b1e8d3bd915fc65c4452?s=96&d=mm&r=g\"\n    },\n    \"meta\": [],\n    \"_links\": {\n        \"self\": [\n            {\n                \"href\": \"http://localhost:8000/wp-json/wp/v2/users/1\"\n            }\n        ],\n        \"collection\": [\n            {\n                \"href\": \"http://localhost:8000/wp-json/wp/v2/users\"\n            }\n        ]\n    }\n}"
+            }
+          ]
+        },
+        {
+          "name": "Read One Blog",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "type": "text",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "type": "text",
+                "value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMCIsImlhdCI6MTU1NjY2NjExOCwibmJmIjoxNTU2NjY2MTE4LCJleHAiOjE1NTcyNzA5MTgsImRhdGEiOnsidXNlciI6eyJpZCI6IjEifX19.E2f1PXnRd5lGws29diyLOwer9hKY5_rJSZ74LIVAXP0"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n\t\"title\": \"Post One\",\n\t\"content\": \"This is a post\",\n\t\"status\": \"publish\"\n}"
+            },
+            "url": {
+              "raw": "http://localhost:8000/wp-json/wp/v2/blogs/8",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8000",
+              "path": ["wp-json", "wp", "v2", "blogs", "8"]
+            },
+            "description": "Find user based on userId"
+          },
+          "response": [
+            {
+              "name": "http://localhost:8000/wp-json/wp/v2/users/1",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": ""
+                },
+                "url": {
+                  "raw": "http://localhost:8000/wp-json/wp/v2/users/1",
+                  "protocol": "http",
+                  "host": ["localhost"],
+                  "port": "8000",
+                  "path": ["wp-json", "wp", "v2", "users", "1"]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Date",
+                  "value": "Tue, 30 Apr 2019 23:09:01 GMT"
+                },
+                {
+                  "key": "Server",
+                  "value": "Apache/2.4.25 (Debian)"
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "PHP/7.2.17"
+                },
+                {
+                  "key": "X-Robots-Tag",
+                  "value": "noindex"
+                },
+                {
+                  "key": "Link",
+                  "value": "<http://localhost:8000/wp-json/>; rel=\"https://api.w.org/\""
+                },
+                {
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "Access-Control-Expose-Headers",
+                  "value": "X-WP-Total, X-WP-TotalPages"
+                },
+                {
+                  "key": "Access-Control-Allow-Headers",
+                  "value": "Authorization, Content-Type"
+                },
+                {
+                  "key": "Allow",
+                  "value": "GET"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "560"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5, max=100"
+                },
+                {
+                  "key": "Connection",
+                  "value": "Keep-Alive"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=UTF-8"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"id\": 1,\n    \"name\": \"jeremy\",\n    \"url\": \"\",\n    \"description\": \"\",\n    \"link\": \"http://localhost:8000/author/jeremy/\",\n    \"slug\": \"jeremy\",\n    \"avatar_urls\": {\n        \"24\": \"http://2.gravatar.com/avatar/b642b4217b34b1e8d3bd915fc65c4452?s=24&d=mm&r=g\",\n        \"48\": \"http://2.gravatar.com/avatar/b642b4217b34b1e8d3bd915fc65c4452?s=48&d=mm&r=g\",\n        \"96\": \"http://2.gravatar.com/avatar/b642b4217b34b1e8d3bd915fc65c4452?s=96&d=mm&r=g\"\n    },\n    \"meta\": [],\n    \"_links\": {\n        \"self\": [\n            {\n                \"href\": \"http://localhost:8000/wp-json/wp/v2/users/1\"\n            }\n        ],\n        \"collection\": [\n            {\n                \"href\": \"http://localhost:8000/wp-json/wp/v2/users\"\n            }\n        ]\n    }\n}"
+            },
+            {
+              "name": "http://localhost:8000/wp-json/wp/v2/users/1",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": ""
+                },
+                "url": {
+                  "raw": "http://localhost:8000/wp-json/wp/v2/users/1",
+                  "protocol": "http",
+                  "host": ["localhost"],
+                  "port": "8000",
+                  "path": ["wp-json", "wp", "v2", "users", "1"]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Date",
+                  "value": "Tue, 30 Apr 2019 23:08:26 GMT"
+                },
+                {
+                  "key": "Server",
+                  "value": "Apache/2.4.25 (Debian)"
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "PHP/7.2.17"
+                },
+                {
+                  "key": "X-Robots-Tag",
+                  "value": "noindex"
+                },
+                {
+                  "key": "Link",
+                  "value": "<http://localhost:8000/wp-json/>; rel=\"https://api.w.org/\""
+                },
+                {
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "Access-Control-Expose-Headers",
+                  "value": "X-WP-Total, X-WP-TotalPages"
+                },
+                {
+                  "key": "Access-Control-Allow-Headers",
+                  "value": "Authorization, Content-Type"
+                },
+                {
+                  "key": "X-WP-Total",
+                  "value": "1"
+                },
+                {
+                  "key": "X-WP-TotalPages",
+                  "value": "1"
+                },
+                {
+                  "key": "Allow",
+                  "value": "GET"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "1797"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5, max=100"
+                },
+                {
+                  "key": "Connection",
+                  "value": "Keep-Alive"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=UTF-8"
+                }
+              ],
+              "cookie": [],
+              "body": "[\n    {\n        \"id\": 1,\n        \"date\": \"2019-04-30T22:58:33\",\n        \"date_gmt\": \"2019-04-30T22:58:33\",\n        \"guid\": {\n            \"rendered\": \"http://localhost:8000/?p=1\"\n        },\n        \"modified\": \"2019-04-30T23:06:07\",\n        \"modified_gmt\": \"2019-04-30T23:06:07\",\n        \"slug\": \"hello-world\",\n        \"status\": \"publish\",\n        \"type\": \"post\",\n        \"link\": \"http://localhost:8000/hello-world/\",\n        \"title\": {\n            \"rendered\": \"Hello world2!\"\n        },\n        \"content\": {\n            \"rendered\": \"\\n<p>Welcome to WordPress. This is your first post. Edit or delete it, then start writing!</p>\\n\",\n            \"protected\": false\n        },\n        \"excerpt\": {\n            \"rendered\": \"<p>Welcome to WordPress. This is your first post. Edit or delete it, then start writing!</p>\\n\",\n            \"protected\": false\n        },\n        \"author\": 1,\n        \"featured_media\": 0,\n        \"comment_status\": \"open\",\n        \"ping_status\": \"open\",\n        \"sticky\": false,\n        \"template\": \"\",\n        \"format\": \"standard\",\n        \"meta\": [],\n        \"categories\": [\n            1\n        ],\n        \"tags\": [],\n        \"_links\": {\n            \"self\": [\n                {\n                    \"href\": \"http://localhost:8000/wp-json/wp/v2/posts/1\"\n                }\n            ],\n            \"collection\": [\n                {\n                    \"href\": \"http://localhost:8000/wp-json/wp/v2/posts\"\n                }\n            ],\n            \"about\": [\n                {\n                    \"href\": \"http://localhost:8000/wp-json/wp/v2/types/post\"\n                }\n            ],\n            \"author\": [\n                {\n                    \"embeddable\": true,\n                    \"href\": \"http://localhost:8000/wp-json/wp/v2/users/1\"\n                }\n            ],\n            \"replies\": [\n                {\n                    \"embeddable\": true,\n                    \"href\": \"http://localhost:8000/wp-json/wp/v2/comments?post=1\"\n                }\n            ],\n            \"version-history\": [\n                {\n                    \"count\": 1,\n                    \"href\": \"http://localhost:8000/wp-json/wp/v2/posts/1/revisions\"\n                }\n            ],\n            \"predecessor-version\": [\n                {\n                    \"id\": 5,\n                    \"href\": \"http://localhost:8000/wp-json/wp/v2/posts/1/revisions/5\"\n                }\n            ],\n            \"wp:attachment\": [\n                {\n                    \"href\": \"http://localhost:8000/wp-json/wp/v2/media?parent=1\"\n                }\n            ],\n            \"wp:term\": [\n                {\n                    \"taxonomy\": \"category\",\n                    \"embeddable\": true,\n                    \"href\": \"http://localhost:8000/wp-json/wp/v2/categories?post=1\"\n                },\n                {\n                    \"taxonomy\": \"post_tag\",\n                    \"embeddable\": true,\n                    \"href\": \"http://localhost:8000/wp-json/wp/v2/tags?post=1\"\n                }\n            ],\n            \"curies\": [\n                {\n                    \"name\": \"wp\",\n                    \"href\": \"https://api.w.org/{rel}\",\n                    \"templated\": true\n                }\n            ]\n        }\n    }\n]"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
