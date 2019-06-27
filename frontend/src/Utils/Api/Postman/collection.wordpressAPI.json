@@ -41,10 +41,10 @@
       ]
     },
     {
-      "name": "Blogs",
+      "name": "Projects",
       "item": [
         {
-          "name": "Create Blog",
+          "name": "Create Project",
           "request": {
             "method": "POST",
             "header": [
@@ -64,18 +64,18 @@
               "raw": "{\n\t\"title\": \"Post One\",\n\t\"content\": \"This is a post\",\n\t\"status\": \"publish\"\n}"
             },
             "url": {
-              "raw": "http://localhost:8000/wp-json/wp/v2/blogs",
+              "raw": "http://localhost:8000/wp-json/wp/v2/projects",
               "protocol": "http",
               "host": ["localhost"],
               "port": "8000",
-              "path": ["wp-json", "wp", "v2", "blogs"]
+              "path": ["wp-json", "wp", "v2", "projects"]
             },
             "description": "Create new post"
           },
           "response": []
         },
         {
-          "name": "Read All Blogs",
+          "name": "Read All Projects",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
           },
@@ -98,11 +98,11 @@
               "raw": "{\n\t\"title\": \"Post One\",\n\t\"content\": \"This is a post\",\n\t\"status\": \"publish\"\n}"
             },
             "url": {
-              "raw": "http://localhost:8000/wp-json/wp/v2/blogs",
+              "raw": "http://localhost:8000/wp-json/wp/v2/projects",
               "protocol": "http",
               "host": ["localhost"],
               "port": "8000",
-              "path": ["wp-json", "wp", "v2", "blogs"]
+              "path": ["wp-json", "wp", "v2", "projects"]
             },
             "description": "Find user based on userId"
           },
@@ -272,7 +272,7 @@
           ]
         },
         {
-          "name": "Read One Blog",
+          "name": "Read One Project",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
           },
@@ -295,11 +295,11 @@
               "raw": "{\n\t\"title\": \"Post One\",\n\t\"content\": \"This is a post\",\n\t\"status\": \"publish\"\n}"
             },
             "url": {
-              "raw": "http://localhost:8000/wp-json/wp/v2/blogs/8",
+              "raw": "http://localhost:8000/wp-json/wp/v2/projects/8",
               "protocol": "http",
               "host": ["localhost"],
               "port": "8000",
-              "path": ["wp-json", "wp", "v2", "blogs", "8"]
+              "path": ["wp-json", "wp", "v2", "projects", "8"]
             },
             "description": "Find user based on userId"
           },

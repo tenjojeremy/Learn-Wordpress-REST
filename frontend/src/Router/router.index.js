@@ -3,7 +3,7 @@ import { BrowserRouter } from 'react-router-dom'
 import { withRouter } from 'react-router'
 
 // Route Pages
-import BlogsRoutes from '../Pages/Blogs/blogs.routes'
+import ProjectsRoutes from '../Pages/Projects/projects.routes'
 
 const Routes = withRouter(({ history }) => {
   // Set history object globally
@@ -11,7 +11,7 @@ const Routes = withRouter(({ history }) => {
 
   return (
     <>
-      <BlogsRoutes />
+      <ProjectsRoutes />
     </>
   )
 })

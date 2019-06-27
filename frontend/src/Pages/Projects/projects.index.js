@@ -1,9 +1,9 @@
 import React, { memo, useEffect, Fragment } from 'react'
 import useApi from '../../Utils/Api/useApi'
-import BlogItem from './blogs.item'
+import ProjectItem from './projects.item'
 
-const Blogs = () => {
-  const route = 'blogs'
+const Projects = () => {
+  const route = 'projects'
   const { loading, request, error, response } = useApi({ route })
 
   useEffect(() => {
@@ -21,11 +21,11 @@ const Blogs = () => {
       <>
         {response.data.map((item) => (
           <Fragment key={item.id}>
-            <BlogItem {...item} />
+            <ProjectItem {...item} />
           </Fragment>
         ))}
       </>
     )
 }
 
-export default memo(Blogs)
+export default memo(Projects)

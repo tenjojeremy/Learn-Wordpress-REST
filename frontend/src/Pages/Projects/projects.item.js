@@ -1,7 +1,7 @@
 import React, { memo, useEffect } from 'react'
 import useApi from '../../Utils/Api/useApi'
 
-const BlogItem = ({ id, acf: { publisher }, title, featured_media }) => {
+const ProjectItem = ({ id, acf: { publisher }, title, featured_media }) => {
   const route = 'media'
 
   const { request, response } = useApi({ route })
@@ -24,4 +24,4 @@ const BlogItem = ({ id, acf: { publisher }, title, featured_media }) => {
   )
 }
 
-export default memo(BlogItem)
+export default memo(ProjectItem)

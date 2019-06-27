@@ -4,19 +4,21 @@ import { Route, Switch, Redirect } from 'react-router-dom'
 import CoreTemplate from '../../Ui/Templates/Core/core.index'
 
 //Components
-const Blog = lazy(() => import(/* webpackChunkName: 'Blog' */ './blogs.index'))
+const Project = lazy(() =>
+  import(/* webpackChunkName: 'Project' */ './projects.index')
+)
 
 // Exports
 export default () => (
   <Switch>
-    <Route exact path="/" render={() => <Redirect to="/blogs" />} />
+    <Route exact path="/" render={() => <Redirect to="/projects" />} />
     <Route
-      path="/blogs"
+      path="/projects"
       render={() => (
         <CoreTemplate>
           <Suspense fallback={null}>
             <Switch>
-              <Route exact path="/blogs" render={() => <Blog />} />
+              <Route exact path="/projects" render={() => <Project />} />
             </Switch>
           </Suspense>
         </CoreTemplate>
