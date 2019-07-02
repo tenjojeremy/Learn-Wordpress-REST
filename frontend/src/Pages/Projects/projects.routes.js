@@ -7,6 +7,9 @@ import CoreTemplate from '../../Ui/Templates/Core/core.index'
 const Project = lazy(() =>
   import(/* webpackChunkName: 'Project' */ './projects.index')
 )
+const ProjectDetails = lazy(() =>
+  import(/* webpackChunkName: 'Project' */ './projects.details')
+)
 
 // Exports
 export default () => (
@@ -19,6 +22,11 @@ export default () => (
           <Suspense fallback={null}>
             <Switch>
               <Route exact path="/projects" render={() => <Project />} />
+              <Route
+                exact
+                path="/projects/:id"
+                render={() => <ProjectDetails />}
+              />
             </Switch>
           </Suspense>
         </CoreTemplate>

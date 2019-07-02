@@ -2,4 +2,4 @@ import styled from 'styled-components'
 
 export const Wrapper = styled.div``
 
-export const Other = styled.span``
+export const Other = styled.h4``

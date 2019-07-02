@@ -1,26 +1,27 @@
 import React, { memo, useEffect } from 'react'
 import useApi from '../../Utils/Api/useApi'
 
-const ProjectItem = ({ id, acf: { publisher }, title, featured_media }) => {
+const ProjectItem = ({ id, acf: { thumb_image, description }, title }) => {
   const route = 'media'
-
   const { request, response } = useApi({ route })
+
   useEffect(() => {
     fetchImage()
   }, [])
 
-  const fetchImage = async () => request({ id: featured_media })
+  const fetchImage = async () => request({ id: thumb_image.id })
+
+  const openDetailsPage = () => window.historyRouter.push(`projects/${id}`)
 
   return (
-    <>
-      <h2> {title.rendered} </h2>
-      <small> {publisher}</small>
+    <div onClick={openDetailsPage}>
+      <h2>{title.rendered}</h2>
       {response ? (
         <img src={response.data.source_url} alt="hello" />
       ) : (
         'loading image....'
       )}
-    </>
+    </div>
   )
 }
 
