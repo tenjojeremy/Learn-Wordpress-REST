@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import axios from 'axios'
 
-const BASE_URL = '/wp-json/wp/v2/'
+const BASE_URL = 'http://localhost:8000/wp-json/wp/v2/'
 
 const useApi = ({ route }) => {
   const [loading, setLoading] = useState(null)
